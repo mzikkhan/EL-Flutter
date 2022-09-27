@@ -26,3 +26,22 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// Expanded(
+//                               child: TextButton(
+//                                 child: Text(
+//                                   'SEE ALL',
+//                                   style: TextStyle(
+//                                       color: const Color(0xFF34893C),
+//                                       fontSize: 12),
+//                                 ),
+//                                 onPressed: () => showModalBottomSheet(
+//                                     // enableDrag: true,
+//                                     shape: RoundedRectangleBorder(
+//                                         borderRadius: BorderRadius.vertical(
+//                                       top: Radius.circular(20),
+//                                     )),
+//                                     context: context,
+//                                     builder: (context) => buildSheet()),
+//                               ),
+//                             ),

@@ -21,7 +21,7 @@ class _HomeState extends State<HomePage> {
           Column(
             children: [
               SizedBox(
-                height: 30,
+                height: 10,
               ),
               Container(
                 // padding: EdgeInsets.symmetric(vertical: 100),
@@ -32,13 +32,15 @@ class _HomeState extends State<HomePage> {
                       children: [
                         Column(
                           children: [
-                            Container(
-                              padding: EdgeInsets.all(16),
-                              child: CircleAvatar(
-                                backgroundImage:
-                                    AssetImage("assets/ZaedProPic.jpg"),
-                                backgroundColor: const Color(0xFF362626),
-                                radius: 47,
+                            Expanded(
+                              child: Container(
+                                padding: EdgeInsets.all(16),
+                                child: CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage("assets/ZaedProPic.jpg"),
+                                  backgroundColor: const Color(0xFF362626),
+                                  radius: 47,
+                                ),
                               ),
                             )
                           ],
@@ -75,11 +77,11 @@ class _HomeState extends State<HomePage> {
                         ),
                       ],
                     )),
-                height: 147,
+                height: 130,
                 width: 388,
               ),
               SizedBox(
-                height: 30,
+                height: 10,
               ),
               Container(
                 // padding: EdgeInsets.symmetric(vertical: 100),
@@ -101,14 +103,14 @@ class _HomeState extends State<HomePage> {
                                   style: TextStyle(fontSize: 15),
                                 ),
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 10, horizontal: 152),
+                                    vertical: 3, horizontal: 152),
                               ),
                             ],
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       Expanded(
                         child: GridView(
@@ -121,79 +123,41 @@ class _HomeState extends State<HomePage> {
                             mainAxisExtent: 100,
                           ),
                           children: [
-                            for (int i = 0; i < 5; i++)
-                              Container(
-                                child: Container(
-                                  height: 94,
-                                  width: 94,
-                                  child: Card(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(14),
-                                    ),
-                                    child: Container(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 10),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Center(
-                                            child: Icon(
-                                              Icons.person,
-                                              color: Colors.yellow,
-                                            ),
-                                          ),
-                                          Text(
-                                            'Bhangari 1',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 12),
-                                          ),
-                                          SizedBox(
-                                            height: 10,
-                                          ),
-                                          Icon(
-                                            Icons.call,
-                                            color: Colors.green,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    color: const Color(0xFF3D403E),
-                                  ),
-                                ),
-                              ),
-                            Expanded(
-                              child: TextButton(
-                                child: Text(
-                                  'SEE ALL',
-                                  style: TextStyle(
-                                      color: const Color(0xFF34893C),
-                                      fontSize: 12),
-                                ),
-                                onPressed: () => showModalBottomSheet(
-                                    // enableDrag: true,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(20),
-                                    )),
-                                    context: context,
-                                    builder: (context) => buildSheet()),
-                              ),
-                            ),
+                            for (int i = 0; i < 3; i++) CardWidget(),
                           ],
                         ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(
+                            child: Text(
+                              'SEE ALL',
+                              style: TextStyle(
+                                  color: const Color(0xFF34893C), fontSize: 12),
+                            ),
+                            onPressed: () => showModalBottomSheet(
+                                // enableDrag: true,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(20),
+                                )),
+                                context: context,
+                                builder: (context) => buildSheet()),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                        ],
                       ),
                     ],
                   ),
                 ),
-                height: 270,
+                height: 180,
                 width: 422,
               ),
               SizedBox(
-                height: 30,
+                height: 5,
               ),
               Container(
                 child: Card(
@@ -202,18 +166,18 @@ class _HomeState extends State<HomePage> {
                   child: Row(
                     children: [
                       SizedBox(
-                        width: 55,
+                        width: 75,
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
                             Icons.monetization_on,
-                            size: 37.0,
+                            size: 25.0,
                             color: const Color(0xFF3D403E),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Text(
                             'SET PRICE',
@@ -222,18 +186,18 @@ class _HomeState extends State<HomePage> {
                         ],
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 20,
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
                             Icons.shopping_cart,
-                            size: 37.0,
+                            size: 25.0,
                             color: const Color(0xFF3D403E),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Text(
                             'SHOP',
@@ -242,18 +206,18 @@ class _HomeState extends State<HomePage> {
                         ],
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 20,
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
                             Icons.person,
-                            size: 37.0,
+                            size: 25.0,
                             color: const Color(0xFF3D403E),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Text(
                             'AGENT',
@@ -264,7 +228,7 @@ class _HomeState extends State<HomePage> {
                     ],
                   ),
                 ),
-                height: 150,
+                height: 100,
                 width: 422,
               ),
             ],
@@ -285,46 +249,56 @@ class _HomeState extends State<HomePage> {
             mainAxisExtent: 130,
           ),
           children: [
-            for (int i = 0; i < 10; i++)
-              Container(
-                child: Container(
-                  height: 94,
-                  width: 94,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Icon(
-                              Icons.person,
-                              color: Colors.yellow,
-                            ),
-                          ),
-                          Text(
-                            'Bhangari 1',
-                            style: TextStyle(color: Colors.white, fontSize: 12),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Icon(
-                            Icons.call,
-                            color: Colors.green,
-                          ),
-                        ],
-                      ),
-                    ),
-                    color: const Color(0xFF3D403E),
-                  ),
-                ),
-              ),
+            for (int i = 0; i < 10; i++) CardWidget(),
           ],
         ),
       );
+}
+
+class CardWidget extends StatelessWidget {
+  const CardWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        height: 94,
+        width: 94,
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.yellow,
+                  ),
+                ),
+                Text(
+                  'Bhangari 1',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Icon(
+                  Icons.call,
+                  color: Colors.green,
+                ),
+              ],
+            ),
+          ),
+          color: const Color(0xFF3D403E),
+        ),
+      ),
+    );
+  }
 }
