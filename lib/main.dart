@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/home_page.dart';
+import 'package:my_first_app/dashboard_main.dart';
 import 'package:my_first_app/profile_page.dart';
 
 Future main() async {
